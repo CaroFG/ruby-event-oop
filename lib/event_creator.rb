@@ -1,4 +1,5 @@
 class EventCreator
+	attr_accessor :title_event, :start_date, :duration, :emails_array
 
 	def get_title
 		puts "Salut, tu veux créer un événement ? Cool !"
@@ -34,7 +35,7 @@ class EventCreator
 		get_duration
 		get_emails
 		new_event = Event.new(@start_date, @duration, @title_event, @emails_array)
-		puts "Super, c'est noté, ton évènement a été créé !"
+		puts "Super, c'est noté, ton évènement \" #{@title_event} \" a été créé !"
 		puts new_event.to_s
 	end
 
