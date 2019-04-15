@@ -15,5 +15,13 @@ class User
 	def self.all
 		return @@all_users
 	end
+
+	def self.find_by_email(email_string)
+		@@all_users.each do |user|
+			if user.email == email_string
+			return puts "Voici l'âge du User trouvé : #{user.age}"
+			end
+		end
+	end
 end
 

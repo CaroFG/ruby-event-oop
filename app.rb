@@ -6,18 +6,12 @@ Bundler.require
 # comme ça, tu peux faire User.new dans ce fichier d'application. Top.
 require_relative 'lib/user'
 require_relative 'lib/event'
+require_relative 'lib/event_creator'
+require_relative 'lib/calendar_displayer'
 
 
 # Maintenant c'est open bar pour tester ton application. Tous les fichiers importants sont chargés
 # Tu peux faire User.new, Event.new, binding.pry, User.all, etc.
 
-julie = User.new("julie@gmail.com", 29)
-robin = User.new("robin@gmail.com", 27)
 
-puts julie
-puts User.all
-
-standup = Event.new("2019-04-15 14:20", 10, "standup quotidien", ["truc@machin.com", "bidule@chose.fr"])
-
-puts standup.to_s
-
+EventCreator.new
